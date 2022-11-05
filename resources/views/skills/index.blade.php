@@ -61,11 +61,11 @@
                                      <form method="POST" action="{{ route('skills.destroy', $skill->id) }}" class="mb-0">
                                         @csrf
                                         @method('DELETE')
-                                        <a href="{{ route('skills.destroy', $skill->id) }}" 
-                                            onclick="event.preventDefault(); this.closest('form').submit();"
+                                        <button type="submit" class="font-medium text-red-600 dark:text-red-500 hover:underline mr-6"
+                                            onclick="return confirm('Are you sure you want to delete the skill')"
                                             class="font-medium text-red-600 dark:text-red-500 hover:underline mr-6">
                                             Delete
-                                         </a>
+                                        </button>
                                     </form>
                                 </td>
                             </tr>

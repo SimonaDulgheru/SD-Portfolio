@@ -13,7 +13,7 @@
 
                 <!-- Name -->
                 <div>
-                    <x-input-label for="email" :value="__('Name')" />
+                    <x-input-label for="name" :value="__('Name')" />
     
                     <x-text-input id="name" 
                                   class="block mt-1 w-full" 

@@ -42,10 +42,22 @@
                                     {{ $project->skill->name }}
                                 </td>
                                 <td class="py-4 px-6">
-                                    <a href="#" 
-                                       class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                    <img src="{{ asset('storage/'. $project->image) }}" class="w-12 h-12" />
+                                </td>
+                                <td class="flex justify-end py-4 px-6">
+                                    <a href="{{ route('projects.edit', $project->id) }}" 
+                                       class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-3">
                                        Edit
                                     </a>
+                                    <form method="POST" action="{{ route('projects.destroy', $project->id) }}" class="mb-0">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="font-medium text-red-600 dark:text-red-500 hover:underline mr-6"
+                                            onclick="return confirm('Are you sure')"
+                                            class="font-medium text-red-600 dark:text-red-500 hover:underline mr-6">
+                                            Delete
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                         @empty

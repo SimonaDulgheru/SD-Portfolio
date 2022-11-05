@@ -24,7 +24,7 @@ class SkillController extends Controller
 
 
     /**
-     * Create skill and view create page.
+     * View create page.
      *
      * @return \Illuminate\View\View
      */
@@ -68,7 +68,7 @@ class SkillController extends Controller
 
 
    /**
-     * Update the skill name.
+     * Update the skill.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
